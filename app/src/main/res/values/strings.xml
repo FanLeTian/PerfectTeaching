@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PerfectTeaching</string>
+    <string name="net_error_msg">网络连接错误</string>
+    <string name="all_data_loaded">加载完成</string>
 </resources>

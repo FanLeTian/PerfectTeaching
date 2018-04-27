@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContent"
+    android:layout_width="match_parent"
+    android:layout_height="126dp"
+    android:background="#F4F4F4">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/kc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="实验名称"
+            android:textColor="#767676"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/kc_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/kc_title"
+            android:layout_below="@+id/kc_title"
+            android:layout_marginTop="5dp"
+            android:text="实验内容"
+            android:textColor="#913062"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/kc_title"
+            android:layout_below="@+id/kc_content"
+            android:layout_marginTop="10dp"
+            android:text="类型"
+            android:textColor="#767676"
+            android:textSize="20sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/item" />"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

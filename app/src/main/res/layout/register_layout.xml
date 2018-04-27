@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+
+    <include layout="@layout/toolbar_back" />
+
+
+    <LinearLayout
+        android:id="@+id/rgister_num_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入学号"
+            android:inputType="text"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rgister_username_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入姓名"
+            android:inputType="text"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rgister_mobie_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/moblie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_password_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/eregister_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textCursorDrawable="@null"
+            android:gravity="center_vertical"
+            android:hint="请设置密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:background="#EB6622"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+
+
+
+</LinearLayout>
