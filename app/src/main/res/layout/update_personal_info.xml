@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_back" />
+
+
+
+    <LinearLayout
+        android:id="@+id/sex_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sex_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入性别"
+            android:inputType="text"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/e_mail_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/e_mail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入邮箱"
+            android:inputType="text"
+            android:maxLength="30"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/remark_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/remark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入生日"
+            android:inputType="date"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/classll"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="11dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/classes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入年级"
+            android:inputType="text"
+            android:maxLength="11"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#A4A4A4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_enter_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="20dp"
+        android:background="#EB6622"
+        android:text="确认"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp" />
+
+</LinearLayout>

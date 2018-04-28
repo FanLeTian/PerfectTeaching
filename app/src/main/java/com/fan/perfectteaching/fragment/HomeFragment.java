@@ -8,7 +8,9 @@ import android.view.View;
 
 import com.aspsine.irecyclerview.IRecyclerView;
 import com.aspsine.irecyclerview.OnRefreshListener;
+import com.bannerlayout.widget.BannerLayout;
 import com.fan.perfectteaching.R;
+import com.fan.perfectteaching.activity.LabDetailactivity;
 import com.fan.perfectteaching.activity.LoginActivity;
 import com.fan.perfectteaching.adapter.HomeAdapter;
 import com.fan.perfectteaching.beans.HomeBean;
@@ -25,6 +27,8 @@ import java.util.List;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
+import static com.fan.perfectteaching.adapter.SimpleData.initModel;
+
 public class HomeFragment extends BaseFragment implements OnItemClickListener<HomeBean.DataBean>,OnRefreshListener {
 
     private IRecyclerView homeRecycler;
@@ -32,6 +36,7 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener<Ho
     private View noDataView;
     private List<HomeBean.DataBean> listData = new ArrayList<>();
 
+    private BannerLayout defaultBanner;
 
     public static HomeFragment newInstance() {
         Bundle args = new Bundle();
@@ -92,7 +97,15 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener<Ho
             getContext().startActivity(intent);
         }
         homeAdapter = new HomeAdapter(mContext);
-        homeRecycler = (IRecyclerView) mContentView.findViewById(R.id.home_recycler);
+        homeRecycler = mContentView.findViewById(R.id.home_recycler);
+        defaultBanner = mContentView.findViewById(R.id.default_banner);
+        defaultBanner
+                .initPageNumView()
+                .initTips()
+                .setTipsDotsSelector(R.drawable.banner)
+                .setPageNumViewMargin(12, 12, 12, 12)
+                .initListResources(initModel())
+                .switchBanner(true);
         homeAdapter.setOnItemClickListener(this);
         homeRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         homeRecycler.setIAdapter(homeAdapter);
@@ -104,7 +117,9 @@ public class HomeFragment extends BaseFragment implements OnItemClickListener<Ho
 
     @Override
     public void onItemClick(int position, HomeBean.DataBean dataBean, View v) {
-        Intent intent = new Intent(getContext(), LoginActivity.class);
+        Intent intent = new Intent(getContext(), LabDetailactivity.class);
+        intent.putExtra("title", dataBean.getName());
+        intent.putExtra("labId", dataBean.getId()+"");
         getActivity().startActivity(intent);
     }
 }

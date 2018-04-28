@@ -112,7 +112,12 @@ public class RegisterActivity extends BackBaseActivity implements View.OnClickLi
                         super.onNext(registerBean);
                         if (registerBean.isOk()) {
                             ToastUtil.showToast(RegisterActivity.this, "注册成功！");
+                            SharedPreferencesUtil.setPrefString(RegisterActivity.this, "USER_ID", registerBean.getData().getId()+"");
+                            SharedPreferencesUtil.setPrefString(RegisterActivity.this, "USER_NAME", registerBean.getData().getName());
                             finish();
+                            finish();
+                            Intent intent = new Intent(RegisterActivity.this, UpdateActivity.class);
+                            startActivity(intent);
                         } else {
                             ToastUtil.showToast(RegisterActivity.this, registerBean.getMsg());
                         }

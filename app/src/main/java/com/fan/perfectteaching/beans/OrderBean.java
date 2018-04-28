@@ -2,20 +2,16 @@ package com.fan.perfectteaching.beans;
 
 import java.util.List;
 
-public class LabDetailBean extends StatusBean {
+public class OrderBean extends StatusBean{
 
 
-    /**
-     * data : {"id":1,"num":1,"name":"AI","content":"Coding","status":0,"type":"lab","teacher":{"id":1,"num":1002,"password":"123456","phone":123456,"name":"小倩","sex":"女","birth":"2018-04-04 10:28:51.0","title":"教授","email":"xiaoqian@qq.com","dept":{"id":1,"num":1001,"name":"计算机科学与工程","chairman":"小高","tel":"123456789","desc":"计算机"}},"student":[{"id":1,"num":1306,"password":"123456","phone":123456,"name":"小美","sex":"女","birth":"2018-04-04 10:54:55.0","cclass":"1","email":"stu@qq.com","status":"1","major":{"id":1,"num":100106,"name":"软件工程","tel":"123456789","assistant":"小高","dept":{"id":1,"num":1001,"name":"计算机科学与工程","chairman":"小高","tel":"123456789","desc":"计算机"}}}]}
-     */
+    private List<DataBean> data;
 
-    private DataBean data;
-
-    public DataBean getData() {
+    public List<DataBean> getData() {
         return data;
     }
 
-    public void setData(DataBean data) {
+    public void setData(List<DataBean> data) {
         this.data = data;
     }
 
@@ -28,7 +24,7 @@ public class LabDetailBean extends StatusBean {
          * status : 0
          * type : lab
          * teacher : {"id":1,"num":1002,"password":"123456","phone":123456,"name":"小倩","sex":"女","birth":"2018-04-04 10:28:51.0","title":"教授","email":"xiaoqian@qq.com","dept":{"id":1,"num":1001,"name":"计算机科学与工程","chairman":"小高","tel":"123456789","desc":"计算机"}}
-         * student : [{"id":1,"num":1306,"password":"123456","phone":123456,"name":"小美","sex":"女","birth":"2018-04-04 10:54:55.0","cclass":"1","email":"stu@qq.com","status":"1","major":{"id":1,"num":100106,"name":"软件工程","tel":"123456789","assistant":"小高","dept":{"id":1,"num":1001,"name":"计算机科学与工程","chairman":"小高","tel":"123456789","desc":"计算机"}}}]
+         * student : [{"id":1,"num":1306,"password":"123456","phone":123456,"name":"小美","sex":"23","birth":"2018-04-04 10:54:55.0","cclass":"1","email":"stu@qq.com","status":"1","major":{"id":1,"num":100106,"name":"软件工程","tel":"123456789","assistant":"小高","dept":{"id":1,"num":1001,"name":"计算机科学与工程","chairman":"小高","tel":"123456789","desc":"计算机"}}},{"id":6,"num":777,"password":"123456","phone":111,"name":"马云","sex":"男","birth":"1999-08-08 00:00:00.0","cclass":"大四","email":"Alibaba@yahoo.com.cn","status":null,"major":null}]
          */
 
         private int id;
@@ -283,7 +279,7 @@ public class LabDetailBean extends StatusBean {
              * password : 123456
              * phone : 123456
              * name : 小美
-             * sex : 女
+             * sex : 23
              * birth : 2018-04-04 10:54:55.0
              * cclass : 1
              * email : stu@qq.com

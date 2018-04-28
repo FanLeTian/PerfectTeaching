@@ -7,6 +7,11 @@
     android:background="#F4F4F4">
 
 
+    <com.bannerlayout.widget.BannerLayout
+        android:id="@+id/default_banner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" />
+
     <com.aspsine.irecyclerview.IRecyclerView
         android:layout_marginTop="20dp"
         android:id="@+id/home_recycler"

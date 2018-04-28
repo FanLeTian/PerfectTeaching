@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/oder_itemcontent"
+    android:layout_width="match_parent"
+    android:layout_height="126dp"
+    android:background="#F4F4F4">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/oder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="AI"
+            android:textColor="#767676"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/order_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/oder_name"
+            android:layout_below="@+id/oder_name"
+            android:layout_marginTop="5dp"
+            android:text="coding"
+            android:textColor="#913062"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/order_lab_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/oder_name"
+            android:layout_below="@+id/order_content"
+            android:layout_marginTop="10dp"
+            android:text="lab"
+            android:textColor="#ec0707"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/orderstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="210dp"
+            android:textColor="#9b1818"
+            android:textSize="24sp"
+            android:drawableLeft="@drawable/nocomplete"
+            android:text="未完成"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

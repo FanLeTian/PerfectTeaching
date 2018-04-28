@@ -14,6 +14,7 @@ import com.fan.perfectteaching.activity.base.BackBaseActivity;
 import com.fan.perfectteaching.beans.LoginBean;
 import com.fan.perfectteaching.netutil.MyWealthApi;
 import com.fan.perfectteaching.netutil.SuscriberX;
+import com.fan.perfectteaching.util.SharedPreferencesUtil;
 import com.fan.perfectteaching.util.ToastUtil;
 
 import java.util.HashMap;
@@ -105,7 +106,14 @@ public class LoginActivity extends BackBaseActivity implements View.OnClickListe
             @Override
             public void onNext(LoginBean loginBean) {
                 super.onNext(loginBean);
-
+                if (loginBean.isOk()) {
+                    ToastUtil.showToast(LoginActivity.this, loginBean.getMsg());
+                    SharedPreferencesUtil.setPrefString(LoginActivity.this, "USER_ID", loginBean.getData().getId() + "");
+                    SharedPreferencesUtil.setPrefString(LoginActivity.this, "USER_NAME", loginBean.getData().getName());
+                    finish();
+                } else {
+                    ToastUtil.showToast(LoginActivity.this, loginBean.getMsg());
+                }
             }
         }));
     }
