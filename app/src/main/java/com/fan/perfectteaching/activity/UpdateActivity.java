@@ -88,6 +88,7 @@ public class UpdateActivity extends BackBaseActivity {
                     @Override
                     public void onNext(StatusBean statusBean) {
                         if (statusBean.isOk()) {
+                            ToastUtil.showToast(UpdateActivity.this, statusBean.getMsg());
                             finish();
                         } else {
                             ToastUtil.showToast(UpdateActivity.this, statusBean.getMsg());
